@@ -33,6 +33,6 @@ jobs:
         id: apko
         with:
           archs: x86_64
-          keyring-append: /github/workspace/melange.rsa.pub
+          keyring-append: /home/runner/work/nginx-image-demo/nginx-image-demo/melange.rsa.pub
           tag: cgr.dev/${{ github.repository }}:latest
           source-date-epoch: ${{ steps.snapshot-date.outputs.epoch }}
