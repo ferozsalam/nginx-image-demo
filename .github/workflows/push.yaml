@@ -2,9 +2,6 @@ name: Build action
 
 on: 
   workflow_dispatch:
-  push:
-  schedule:
-    - cron: '15 3 * * *'  # every day at 03:15 (just wanted to avoid midnight)
 
 jobs:
   build:
@@ -32,7 +29,7 @@ jobs:
           sign-with-temporary-key: true
           empty-workspace: true
 
-      - uses: chainguard-dev/actions/apko-build@main
+      - uses: chainguard-images/actions/apko-build@main
         id: apko
         with:
           archs: x86_64
