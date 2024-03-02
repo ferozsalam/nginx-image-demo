@@ -36,14 +36,3 @@ jobs:
           keyring-append: /github/workspace/melange.rsa.pub
           tag: cgr.dev/${{ github.repository }}:latest
           source-date-epoch: ${{ steps.snapshot-date.outputs.epoch }}
-
-      - uses: docker/login-action@bb984efc561711aaa26e433c32c3521176eae55b # v1.13.0
-        with:
-          registry: cgr.dev
-          username: ${{ github.repository_owner }}
-          password: ${{ github.token }}
-
-      - shell: bash
-        run: |
-          # TODO: Add attributes based on things like the commit.
-          COSIGN_EXPERIMENTAL=true cosign sign ${{ steps.apko.outputs.digest }}
