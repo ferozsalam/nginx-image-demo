@@ -1,5 +1,5 @@
 package:
-  name: nginx
+  name: nginx-test
   version: 1.20.2
   epoch: 0
   description: "the nginx webserver"
