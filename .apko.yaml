@@ -1,10 +1,10 @@
 contents:
   repositories:
+    - '/home/runner/work/nginx-image-demo/nginx-image-demo/packages'  
     - https://dl-cdn.alpinelinux.org/alpine/edge/main
-    - '@local /github/workspace/packages'
   packages:
     - alpine-baselayout-data
-    - nginx@local
+    - nginx
 
 entrypoint:
   type: service-bundle
