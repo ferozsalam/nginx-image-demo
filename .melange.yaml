@@ -48,7 +48,7 @@ environment:
 pipeline:
   - uses: fetch
     with:
-      uri: https://nginx.org/download/${{package.name}}-${{package.version}}.tar.gz
+      uri: https://nginx.org/download/nginx-${{package.version}}.tar.gz
       expected-sha256: 958876757782190a1653e14dc26dfc7ba263de310e04c113e11e97d1bef45a42
   - name: 'Configure nginx'
     runs: |
